@@ -35,7 +35,7 @@ AWS CDK is an open-source software development framework that defines several hi
 Diagram below shows how infrastructure stacks are generated using AWS CDK:  
 </p>
 
-![High-level concepts in AWS CDK](/assets/AppStacks.png)
+![High-level concepts in AWS CDK](/assets/images/AppStacks.png)
 
 <p>
   In the diagram, you can see the smallest building block of an App is Construct. Constructs are re-usable cloud components that could either represent a single AWS resource (e.g. S3, Lambda), or it could be a higher-level abstraction of multiple AWS resources. To initialize a stack, you have to define 3 parameters, namely scope, id and props. An example provided by AWS developer guide could be seen as follow:
@@ -109,12 +109,11 @@ Stacks must be defined within the scope of an App. An App could have one or more
  <p>
   Go to S3 bucket, we can see the S3 bucket created using cdk code:
 </p>
-<!-- ![S3 bucket generate by CDK code](/assets/S3.png) -->
-<!-- ![High-level concepts in AWS CDK](/assets/AppStacks.png) -->
+ ![S3 bucket generate by CDK code](../assets/images/S3.png)
 <p>
  We can also see the stack we deployed in CloudFormation. Note that the CDKToolKit stack is created by default and can be re-used by many CDK applications.
  </p>
-![CloudFormation Stacks generate by CDK code](/assets/Cfn.png)
+![CloudFormation Stacks generate by CDK code](../assets/images/Cfn.png)
 <p>
  That’s it, we can now clean up the environment by running `cdk destroy` to avoid any unnecessary billing when we are done with the experiment. 
  </p>
@@ -131,6 +130,6 @@ Stacks must be defined within the scope of an App. An App could have one or more
 </p>
 ## References
 
-- https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac
-- https://aws.amazon.com/cdk/
-- https://docs.aws.amazon.com/cdk/v2/guide/home.html
+- [RedHat intro on IaC]: https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac
+- [AWS CDK page]: https://aws.amazon.com/cdk/
+- [AWS CDK developer guide]: https://docs.aws.amazon.com/cdk/v2/guide/home.html
