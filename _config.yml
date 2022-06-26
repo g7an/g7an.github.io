@@ -19,10 +19,9 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://g7an.github.io"
 permalink: /:year/:month/:day/:title
-repository: ShawnTeoh/matjek
+repository: g7an/g7an.github.io
 paginate: 5
 
-# MatJek specific configurations
 github_profile: "https://g7an.github.io"
 user: "Gloria Tan"
 user_email: "sygloria.tan@gmail.com"
