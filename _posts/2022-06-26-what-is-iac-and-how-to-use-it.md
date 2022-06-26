@@ -107,13 +107,13 @@ Stacks must be defined within the scope of an App. An App could have one or more
   Finally, let’s deploy our infra stack using `cdk deploy` and check it out on AWS console!
  </p>
  <p>
-  Go to S3 bucket, we can see the S3 bucket created using cdk code:
+  Go to S3 bucket, we can see the S3 bucket created using cdk code. We can also see the stack we deployed in CloudFormation. Note that the CDKToolKit stack is created by default and can be re-used by many CDK applications.
 </p>
- ![S3 bucket generate by CDK code](/assets/images/S3.png)
-<p>
+<!-- ![High-level concepts in AWS CDK](/assets/images/AppStacks.png) -->
+<!-- <p>
  We can also see the stack we deployed in CloudFormation. Note that the CDKToolKit stack is created by default and can be re-used by many CDK applications.
- </p>
-![CloudFormation Stacks generate by CDK code](/assets/images/Cfn.png)
+ </p> -->
+<!-- ![CloudFormation Stacks generate by CDK code](/assets/images/Cfn.png) -->
 <p>
  That’s it, we can now clean up the environment by running `cdk destroy` to avoid any unnecessary billing when we are done with the experiment. 
  </p>
