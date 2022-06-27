@@ -58,13 +58,13 @@ const app = new App();
 new HelloCdkStack(app, "HelloCdkStack");
 ```
 
-<p>
-  As can be seen in this example, the construct in this case is an S3 bucket. 
-  The scope of S3 bucket is this, referring to the current object (<code>new HelloCdkStack()</code>). 
-  The id of a construct is a string that uniquely identifies the construct, in this case 'MyFirstBucket'. 
-  The props is a set of key-value pairs that defines the constructs’ initial configuration. 
-  This is optional, since some defaults are pre-defined. But if you want to specify this, check out the API reference for AWS CDK to take a closer look (all the props available for S3 buckets could be found (all the props available for S3 buckets could be found [here](https://docs.aws.amazon.com/cdk/api/v1/docs/@aws-cdk_aws-s3.Bucket.html#construct-props)).
-</p>
+As can be seen in this example, the construct in this case is an S3 bucket. 
+The scope of S3 bucket is this, referring to the current object (<code>new HelloCdkStack()</code>). 
+The id of a construct is a string that uniquely identifies the construct, in this case 'MyFirstBucket'. 
+The props is a set of key-value pairs that defines the constructs’ initial configuration. 
+This is optional, since some defaults are pre-defined. But if you want to specify this, check out the API reference for AWS CDK to take a closer look (all the props available for S3 buckets could be found (all the props available for S3 buckets could be found [here](https://docs.aws.amazon.com/cdk/api/v1/docs/@aws-cdk_aws-s3.Bucket.html#construct-props). 
+  
+  
 <p>
 Constructs must be defined within the scope of a stack. Stacks are the unit of deployment that AWS CloudFormation instantiates (implemented through CloudFormation stacks). Stacks contain sets or sets of AWS resources that are created and managed as a single unit. An AWS CDK App can have one or more stacks.  
 </p>
@@ -93,7 +93,7 @@ Stacks must be defined within the scope of an App. An App could have one or more
   
  
  ```TypeScript
- import { Stack, StackProps } from 'aws-cdk-lib';
+import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 
@@ -135,9 +135,8 @@ export class HelloCdkStack extends Stack {
 <p>
  That’s it, we can now clean up the environment by running <code>cdk destroy</code> to avoid any unnecessary billing when we are done with the experiment. 
  </p>
- <p>
- To start working on CDK applications, please check out the [developer guide](https://docs.aws.amazon.com/cdk/v2/guide/home.html). 
- </p>
+  
+
 #### Conclusion
 <p>
  In this post, we have talked about the concept of Infrastructure as Code (IaC) and why we should consider using IaC to manage our cloud infrastructures. In a nutshell, IaC makes the provision, management and deployment of our cloud infra in a more repeatable, reliable and consistent manner.
