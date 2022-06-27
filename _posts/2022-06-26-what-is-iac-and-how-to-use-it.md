@@ -110,13 +110,13 @@ Stacks must be defined within the scope of an App. An App could have one or more
  Go to S3 bucket, we can see the S3 bucket created using cdk code:
 </p>
 
-![S3 bucket generate by CDK code](/assets/images/s3.png)
+![S3 bucket generate by CDK code](/assets/images/s3.png){: width="250" }
 
 <p>
  We can also see the stack we deployed in CloudFormation. Note that the CDKToolKit stack is created by default and can be re-used by many CDK applications.
  </p>
  
-![CloudFormation Stacks generate by CDK code](/assets/images/Cfn.png)
+![CloudFormation Stacks generate by CDK code](/assets/images/Cfn.png){: width="250" }
 
 <p>
  That’s it, we can now clean up the environment by running `cdk destroy` to avoid any unnecessary billing when we are done with the experiment. 
