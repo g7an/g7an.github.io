@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "What is IaC and How can we do it on AWS"
-date:   2022-06-26
+title:  "Infrastructure As Code and How to do it on AWS"
+<!-- date:   2022-06-26  -->
 categories: Cloud
 tags: IaC AWS 
 comments: 1
