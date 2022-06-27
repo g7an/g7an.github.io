@@ -88,7 +88,26 @@ Stacks must be defined within the scope of an App. An App could have one or more
  `cdk init` is a CDK CLI command that could create a new CDK project in the current directory using a template (more info could be found via `cdk init --help`). 
  </p>
  <p>
- Then, go into the `hello_cdk_stack.ts` under lib directory and copy the source code above into the file. You can run `npm run watch` inside HelloCdk directory to watch the code updates and check for potential errors.  
+ Then, go into the `hello_cdk_stack.ts` under lib directory and copy the source code into the file:
+  
+ ```TypeScript
+ import { Stack, StackProps } from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+
+export class HelloCdkStack extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
+    super(scope, id, props);
+
+    // The code that defines your stack goes here
+    new s3.Bucket(this, 'MyFirstBucket', {
+      versioned: true
+    }); // construct
+  }
+} 
+ ```
+  
+  You can run `npm run watch` inside HelloCdk directory to watch the code updates and check for potential errors.  
 </p>
 <p>
  After modifying code, run `cdk diff` to take a look at what changes we are about to deploy. 
@@ -106,23 +125,15 @@ Stacks must be defined within the scope of an App. An App could have one or more
   Finally, let’s deploy our infra stack using `cdk deploy` and check it out on AWS console!
  </p>
  <p>
- Go to S3 bucket, we can see the S3 bucket created using cdk code:
-</p>
-
-![S3 bucket generate by CDK code](/assets/images/s3.png){:width="550" }
-
-<p>
+ Go to S3 bucket, we can see the S3 bucket created using cdk code
  We can also see the stack we deployed in CloudFormation. Note that the CDKToolKit stack is created by default and can be re-used by many CDK applications.
  </p>
- 
-![CloudFormation Stacks generate by CDK code](/assets/images/Cfn.png){:width="550" }
 
 <p>
  That’s it, we can now clean up the environment by running `cdk destroy` to avoid any unnecessary billing when we are done with the experiment. 
  </p>
  <p>
- To start working on CDK applications, please use the 
-  ([https://docs.aws.amazon.com/cdk/v2/guide/home.html](https://docs.aws.amazon.com/cdk/v2/guide/home.html)). 
+ To start working on CDK applications, please check out the [developer guide]([https://docs.aws.amazon.com/cdk/v2/guide/home.html](https://docs.aws.amazon.com/cdk/v2/guide/home.html)). 
  </p>
 #### Conclusion
 <p>
