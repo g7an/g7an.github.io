@@ -136,7 +136,7 @@ export class HelloCdkStack extends Stack {
  That’s it, we can now clean up the environment by running <code>cdk destroy</code> to avoid any unnecessary billing when we are done with the experiment. 
  </p>
  <p>
- To start working on CDK applications, please check out the [developer guide]([https://docs.aws.amazon.com/cdk/v2/guide/home.html](https://docs.aws.amazon.com/cdk/v2/guide/home.html)). 
+ To start working on CDK applications, please check out the [developer guide](https://docs.aws.amazon.com/cdk/v2/guide/home.html). 
  </p>
 #### Conclusion
 <p>
