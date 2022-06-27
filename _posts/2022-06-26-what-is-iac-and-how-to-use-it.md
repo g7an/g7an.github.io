@@ -6,7 +6,6 @@ categories: Cloud
 tags: IaC AWS 
 comments: 1
 ---
-#### What is Infrastructure as Code
 <p> 
 One interesting new concept I learnt when I was an intern at AWS is Infrastructure as Code (IaC). 
 IaC refers to provision, management and deployment of cloud infrastructure, i.e. the cloud application resources, through code. 
@@ -98,7 +97,7 @@ Stacks must be defined within the scope of an App. An App could have one or more
   Then, let’s synthesize the CloudFormation template by using `cdk synth`. The template will be printed out when you run the command.
  </p>
  <p>
-  To explain more about what happens in this step, let’s use an analogy of running a compiled language like C++. In this case, CDK CLI acts like the compiler that turns your source code into assembly language (i.e. the machine instructions), and `cdk synth` is the command used to generate the “assembly language” - the CloudFormation template.
+ To explain more about what happens in this step, let’s use an analogy of running a compiled language like C++. In this case, CDK CLI acts like the compiler that turns your source code into assembly language (i.e. the machine instructions), and `cdk synth` is the command used to generate the “assembly language” - the CloudFormation template.
 </p>
 <p>
   After “compiling” the source code, the next step would be to execute the compiled code, in this case is to deploy our infra stack to the cloud. Before doing this, we need to run an extra command, `cdk bootstrap`, to bootstrap our cloud environment (i.e. to specify the account and region that the infra stack will be deployed). We can specify the environment in this command, but in our case a default environment will be used (which we have specified in `~/.aws/credentials`).
@@ -110,13 +109,13 @@ Stacks must be defined within the scope of an App. An App could have one or more
  Go to S3 bucket, we can see the S3 bucket created using cdk code:
 </p>
 
-![S3 bucket generate by CDK code](/assets/images/s3.png){:width="250" }
+![S3 bucket generate by CDK code](/assets/images/s3.png){:width="550" }
 
 <p>
  We can also see the stack we deployed in CloudFormation. Note that the CDKToolKit stack is created by default and can be re-used by many CDK applications.
  </p>
  
-![CloudFormation Stacks generate by CDK code](/assets/images/Cfn.png){:width="250" }
+![CloudFormation Stacks generate by CDK code](/assets/images/Cfn.png){:width="550" }
 
 <p>
  That’s it, we can now clean up the environment by running `cdk destroy` to avoid any unnecessary billing when we are done with the experiment. 
